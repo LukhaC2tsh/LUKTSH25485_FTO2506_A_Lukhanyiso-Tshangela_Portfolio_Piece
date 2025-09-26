@@ -19,8 +19,8 @@ export async function fetchTasks() {
     }
 
 }
-
-function loadTasks() {
+//function loads tasks from local storage
+export function loadTasks() {
   return JSON.parse(localStorage.getItem("tasks")) || [];
 }
 
