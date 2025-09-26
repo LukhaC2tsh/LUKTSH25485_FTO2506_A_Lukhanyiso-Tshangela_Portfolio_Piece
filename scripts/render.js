@@ -34,7 +34,7 @@ export function renderTasks(tasks){
 
     //appends a new task to the column with the same status
     tasks.forEach(task => {
-        const column = columns[task.status.toLowerCase];
+        const column = columns[task.status.toLowerCase()];
         if(column){
             const card =  createTaskCard(task);
             column.appendChild(card);
