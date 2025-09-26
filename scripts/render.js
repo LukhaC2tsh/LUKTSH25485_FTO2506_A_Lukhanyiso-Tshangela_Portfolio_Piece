@@ -1,3 +1,5 @@
+import { initializeModal } from "./modal.js";
+
 //array of columns by status: todo, doing, done with parent elements with class names: "column-div"
 const columns = {
     todo: document.querySelector(`.column-div[data-status="todo"] .tasks-container`),
