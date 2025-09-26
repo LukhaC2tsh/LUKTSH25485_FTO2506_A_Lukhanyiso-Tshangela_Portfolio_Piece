@@ -323,11 +323,6 @@ input{
   justify-content: space-between;
 }
 #close-modal-btn{
-  padding: 0;
-  margin: 0;
-  border: none;
-  width: 20px;
-  height: 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
