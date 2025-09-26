@@ -10,6 +10,8 @@ export async function fetchTasks() {
         }
         
         const data = await response.json();
+        saveTasks(data);
+        return data
 
         localStorage.setItem("tasks", JSON.stringify(data));
     } catch(error){
