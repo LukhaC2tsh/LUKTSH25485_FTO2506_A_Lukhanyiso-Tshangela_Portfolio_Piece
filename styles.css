@@ -301,7 +301,7 @@ input{
 .status-options{
   margin:0;
   padding-left: 0;
-  width: fit-content;
+  width: 100%;
 }
 
 .status-options li{
