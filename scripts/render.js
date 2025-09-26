@@ -14,6 +14,10 @@ export function createTaskCard(task){
     card.innerHTML = `${task.title}`;
     card.id = task.id;
 
+    card.addEventListener("click", function(){
+        initializeModal(task);
+    })
+
     return card;
 }
 
