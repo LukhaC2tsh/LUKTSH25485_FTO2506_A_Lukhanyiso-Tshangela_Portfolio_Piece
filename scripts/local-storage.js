@@ -23,7 +23,25 @@ export async function fetchTasks() {
 export function loadTasks() {
   return JSON.parse(localStorage.getItem("tasks")) || [];
 }
+//function saves tasks to local storage
+export function saveTasks(tasks){
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
-const tasks = loadTasks();
-console.log("Loaded tasks from localStorage:", tasks);
 
+// Initialize the board
+export async function initBoard() {
+    let tasks = loadTasks();
+
+    // If no tasks in localStorage, fetch from API
+    if (tasks.length === 0) {
+        tasks = await fetchTasks();
+    }
+
+    // Render tasks
+    renderTasks(tasks);
+
+    console.log("Kanban board initialized with tasks:", tasks);
+}
+
+initBoard();
