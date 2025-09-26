@@ -13,7 +13,6 @@ export async function fetchTasks() {
         saveTasks(data);
         return data
 
-        localStorage.setItem("tasks", JSON.stringify(data));
     } catch(error){
         console.error(error)
     }
