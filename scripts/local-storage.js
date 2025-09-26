@@ -1,6 +1,7 @@
 import {renderTasks, createTaskCard} from "./render.js"
 
-async function fetchTasks() {
+//function fetches tasks from the API
+export async function fetchTasks() {
     try{
         const response = await fetch("https://jsl-kanban-api.vercel.app/");
         
