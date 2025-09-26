@@ -14,9 +14,17 @@ export function initializeModal(task){
 
     setupDropdown(task);
     openModal();
+    closeButton();
 }
 
+function closeButton(){
+    const closeBtn = document.getElementById('close-modal-btn');
+    closeBtn.addEventListener("click", function(){
+        closeModal();
+    })
+}
 
+/**************************************DROPDOWN SCRIPT****************************************/
 //function sets the style for the list items in the dropdown
 function styleOptions(listItems) {
   listItems.forEach(li => {
