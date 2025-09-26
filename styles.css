@@ -278,6 +278,8 @@ input{
   font-weight: 500;
   font-size: 13px;
   padding: .5rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .status-option-container{
@@ -309,6 +311,7 @@ input{
   margin: 5px 0 5px 0;
   font-weight: 500;
   font-size: 13px;
+  cursor: pointer;
   color: var(--secondary-font-color);
   padding-left: .5rem;
 }
