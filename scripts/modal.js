@@ -67,7 +67,7 @@ function setupOutsideClick(optionsTrigger, optionsContainer) {
 }
 
 //function initialises the dropdown
-export function setupDropdown(task) {
+function setupDropdown(task) {
   const optionsContainer = document.getElementById("status-option-container");
   const optionsTrigger = document.getElementById("task-status-event");
   const listItemTrigger = optionsContainer.querySelectorAll(".status-options li");
