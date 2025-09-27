@@ -222,7 +222,6 @@ h2 {
   width: 600;
   height: fit-content;
   border: none;
-  position: relative;
   overflow: visible;
 }
 
@@ -320,7 +319,8 @@ input{
   padding-left: .5rem;
 }
 
-.header{
+/**************************MODAL HEADER****************/
+.modal-header{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -361,6 +361,7 @@ input{
   border: none;
   background-color: #635FC7;
   color: #fff;
+  cursor: pointer;
 }
 #delete-task-btn{
   font-family: inherit;
@@ -371,18 +372,20 @@ input{
   border: none;
   background-color: #EA5555;
   color: #fff;
+  cursor: pointer;
 }
+
+/***********************************New Task Button********************************/
 #create-task-btn{
   font-family: inherit;
   font-weight: 700;
-  width: 295px;
+  width: 100%;
   height: 40px;
   border-radius: 20px;
   border: none;
   background-color: #635FC7;
   color: #fff;
   cursor: pointer;
-  display: none;
 }
 
 #add-task-btn{
@@ -485,6 +488,8 @@ input{
     display: none;
   }
 }
+
+
 
 /**************************
 modal view
