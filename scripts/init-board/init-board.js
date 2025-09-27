@@ -1,5 +1,5 @@
-import {renderTasks, createTaskCard} from "../rendering/render.js"
-import {closeButton,initializeModal} from "../modal/edit-modal/edit-modal.js"
+import {renderTasks} from "../rendering/render.js"
+import {closeButton} from "../modal/edit-modal/edit-modal.js"
 import { initNewTaskModal} from "../modal/new-modal/new-modal.js"
 import {loadTasks, fetchTasks, saveTasks} from "../utils/local-storage.js"
 
