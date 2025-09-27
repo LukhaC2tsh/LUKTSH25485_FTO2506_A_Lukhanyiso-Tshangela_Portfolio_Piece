@@ -273,7 +273,11 @@ input{
   justify-content:space-between;
 
 }
-
+.task-status-container{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
 .task-status-event span{
   font-weight: 500;
   font-size: 13px;
