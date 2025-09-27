@@ -17,7 +17,7 @@ async function initBoard() {
     renderTasks(tasks);
     
     closeButton();
-
+    initNewTaskModal();
     console.log("Kanban board initialized with tasks:", tasks);
 }
 
