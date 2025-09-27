@@ -381,6 +381,24 @@ input{
   border: none;
   background-color: #635FC7;
   color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+#add-task-btn{
+  width: 114;
+  height: 33px;
+  border-radius: 20px;
+  border: none;
+  background-color:#635FC7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#add-task-btn-2{
   display: none;
 }
 
