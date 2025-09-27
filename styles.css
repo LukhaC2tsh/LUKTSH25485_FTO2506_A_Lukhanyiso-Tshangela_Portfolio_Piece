@@ -503,4 +503,19 @@ modal view
   .column-div {
     padding: 24px;
   }
+  #add-task-btn{
+    display: none;
+  }
+  #add-task-btn-2{
+    width: 33px;
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    background-color:#635FC7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
