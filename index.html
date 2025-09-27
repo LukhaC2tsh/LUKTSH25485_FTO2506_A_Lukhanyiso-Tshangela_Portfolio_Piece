@@ -17,17 +17,18 @@
     <title>Kanban Task Management</title>
   </head>
 
-  <script defer src="./scripts/init-board/init-board.js" type="module"></script>
   <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
     <nav class="side-bar" id="side-bar-div">
-      <div id="side-logo-div">
-        <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
-      </div>
+      <div class="side-bar-content">
+        <div id="side-logo-div">
+          <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
+        </div>
 
-      <div class="boards-nav-links-div" id="boards-nav-links-div">
-        <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
-        <button class="board-btn">Launch Career</button>
+        <div class="boards-nav-links-div" id="boards-nav-links-div">
+          <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
+          <button class="board-btn">Launch Career</button>
+        </div>
       </div>
     </nav>
 
@@ -85,6 +86,9 @@
         </main>
       </div>
     </div>
+
+
+
     <!-------------------------------------TASK MODAL--------------------------------------------->
     <div class="modals-container">
       <dialog id="task-modal">
@@ -123,6 +127,9 @@
           </div>
         </form>
       </dialog>
+
+
+
       <!-----------------------------------NEW TASK MODAL------------------------------------>
       <dialog id="new-task-modal">
         <form method="dialog" class="new-task-content">
@@ -159,6 +166,7 @@
           </div>
         </form>
       </dialog>
+
     </div>
   </body>
 
