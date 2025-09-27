@@ -1,0 +1,24 @@
+import {renderTasks, createTaskCard} from "../rendering/render.js"
+import {closeButton,initializeModal} from "../modal/edit-modal/edit-modal.js"
+import { initNewTaskModal} from "../modal/new-modal/new-modal.js"
+import {loadTasks, fetchTasks, saveTasks} from "../utils/local-storage.js"
+
+
+////////////////////////////////////////////////Initialize the board\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+async function initBoard() {
+    let tasks = loadTasks();
+
+    // If no tasks in localStorage, fetch from API
+    if (tasks.length === 0) {
+        tasks = await fetchTasks();
+    }
+
+    // Render tasks
+    renderTasks(tasks);
+    
+    closeButton();
+
+    console.log("Kanban board initialized with tasks:", tasks);
+}
+
+initBoard();
