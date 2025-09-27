@@ -1,8 +1,8 @@
-function openModal(id){
+export function openModal(id){
     document.getElementById(id).showModal();
 }
 
-function closeModal(id){
+export function closeModal(id){
     document.getElementById(id).close();
 }
 
@@ -18,30 +18,24 @@ export function initializeModal(task){
 
 
 export function closeButton(){
-   const buttons = [
-    {id: "new-close-btn", modal:"new-task-modal"},
-    {id: "close-modal-btn", modal:"task-modal"}
-  ]
+   const newCloseBtn = document.getElementById('new-close-modal-btn');
+   const closeModalBtn = document.getElementById("close-modal-btn");
 
-  buttons.forEach(({id, modal}) => {
-    const btn = document.getElementById(id);
-    if(btn){
-      btn.addEventListener("click", () => closeModal(modal));
-    }
-  });
+   if(newCloseBtn) newCloseBtn.addEventListener("click", () => closeModal("new-task-modal"));
+   if(closeModalBtn) closeModalBtn.addEventListener("click", () => closeModal("task-modal"))
 
 }
 
 /**************************************DROPDOWN SCRIPT****************************************/
 //function sets the style for the list items in the dropdown
-function styleOptions(listItems) {
+export function styleOptions(listItems) {
   listItems.forEach(li => {
     li.style.color = "var(--secondary-font-color)";
     li.style.fontWeight = "500";
   });
 }
 
-//function attaches the list item listeners
+///////////////////////////////////////////////////////function attaches the list item listeners
 function attachOptionListeners(listItems, optionsContainer) {
   listItems.forEach(li => {
     li.addEventListener("click", function(event) {
@@ -52,12 +46,13 @@ function attachOptionListeners(listItems, optionsContainer) {
   });
 }
 
-//function sets the initial status of the task
-function setInitialStatus(optionsTrigger, task) {
+////////////////////////////function sets the initial status of the task
+export function setInitialStatus(optionsTrigger, task) {
   optionsTrigger.querySelector("#task-status").innerText = task.status;
 }
 
-function setupToggle(optionsTrigger, optionsContainer) {
+////////////////////////////////////////////////////////////////////////////////////////////
+export function setupToggle(optionsTrigger, optionsContainer) {
   if (optionsTrigger.dataset.toggleSetup === "true") return; // already set up
 
   optionsTrigger.addEventListener("click", function(event) {
@@ -69,15 +64,24 @@ function setupToggle(optionsTrigger, optionsContainer) {
 }
 
 //function closes list option block when clicks are outside optionsContainer and optionsTrigger
-function setupOutsideClick(optionsTrigger, optionsContainer) {
-  document.addEventListener("click", function(event) {
+export function setupOutsideClick(optionsTrigger, optionsContainer) {
+  if (optionsContainer.dataset.outsideClickSetup === "true") return;
+
+  const outsideClickListener = (event) => {
     if (!optionsContainer.contains(event.target) && !optionsTrigger.contains(event.target)) {
       optionsContainer.classList.remove("show-options");
     }
-  });
+  };
+
+  /////////////////////////////////////////////////Add the listener to the document
+  document.addEventListener("click", outsideClickListener);
+
+  ///////////////////////////////////////////////////////Mark this container as having the listener set up
+  optionsContainer.dataset.outsideClickSetup = "true";
 }
 
-//function initialises the dropdown
+
+////////////////////////////////////////////////////function initialises the dropdown
 function setupDropdown(task) {
   const optionsContainer = document.getElementById("status-option-container");
   const optionsTrigger = document.getElementById("task-status-event");
