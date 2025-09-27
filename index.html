@@ -115,6 +115,41 @@
         <div class="buttons-container" id="buttons-container">
           <button type="button"  id="save-task-btn">Save</button>
           <button type="button"  id="delete-task-btn">Delete</button>
+        </div>
+      </form>
+    </dialog>
+     <!-----------------------------------NEW TASK MODAL------------------------------------>
+    <dialog id="new-task-modal">
+      <form method="dialog" class="new-task-content">
+        <div class="new-modal-header">
+          <h3>Task</h3>
+          <button type="button" id="new-close-modal-btn" aria-label="close">
+            <img id="new-close-modal-icon" src="assets/Exit-icon.svg" alt="close-icon">
+          </button>
+        </div>
+        <label for="new-task-title">Title:</label>
+        <input type="text" id="new-task-title">
+
+        <label for="new-task-desc">Description:</label>
+        <textarea id="new-task-desc"></textarea>
+
+        <label>Status:</label>
+
+        <!--TASK STATUS DROPDOWN-->
+        <div class="task-status-container">
+          <div class="task-status-event" id="task-status-event">
+              <span id="task-status"></span>
+              <div class="dropdown-arrow"></div>
+          </div>
+          <div class="status-option-container" id="status-option-container">
+            <ul class="status-options" id="status-options">
+              <li data-status="todo">todo</li>
+              <li data-status="doing">doing</li>
+              <li data-status="done">done</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttons-container" id="buttons-container">
           <button type="button"  id="create-task-btn">Create</button>
         </div>
       </form>
