@@ -481,6 +481,9 @@ input{
   .column-div {
     width: 100%;
   }
+  #add-task-btn-2{
+    display: none;
+  }
 }
 
 /**************************
