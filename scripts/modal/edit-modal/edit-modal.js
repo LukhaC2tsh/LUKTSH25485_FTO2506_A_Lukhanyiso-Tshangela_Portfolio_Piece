@@ -1,5 +1,5 @@
-import { renderTasks } from "../rendering/render.js";
-import { saveTasks, loadTasks, fetchTasks } from "../utils/local-storage.js";
+import { renderTasks } from "../../rendering/render.js";
+import { saveTasks, loadTasks, fetchTasks } from "../../utils/local-storage.js";
 
 /**
  * Opens a modal dialog by its element ID.

@@ -1,6 +1,8 @@
-import { renderTasks } from "../rendering/render.js";
-import { loadTasks, saveTasks } from "../utils/local-storage.js";
+import { renderTasks } from "../../rendering/render.js";
+import { loadTasks, saveTasks } from "../../utils/local-storage.js";
 import { closeModal, openModal, setupOutsideClick, setupToggle, styleOptions } from "../edit-modal/edit-modal.js";
+
+
 
 /**
  * Initializes the "New Task" modal.

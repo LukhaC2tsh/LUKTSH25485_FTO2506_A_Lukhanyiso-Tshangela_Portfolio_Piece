@@ -1,8 +1,9 @@
-import { initSideBar } from "../ui-and-theme/side-bar.js";
-import { initNewTaskModal } from "../modal/new-modal/new-modal.js";
-import { closeButton } from "../modal/edit-modal/edit-modal.js";
-import { loadTasks } from "../utils/local-storage.js";
 import { renderTasks } from "../rendering/render.js";
+import { loadTasks, saveTasks, fetchTasks } from "../utils/local-storage.js";
+import { closeButton } from "../modal/edit-modal/edit-modal.js";
+import { initNewTaskModal } from "../modal/new-modal/new-modal.js";
+import { initSideBar } from "../ui-and-theme/side-bar.js";
+
 /**
  * Initializes the Kanban board application.
  *
