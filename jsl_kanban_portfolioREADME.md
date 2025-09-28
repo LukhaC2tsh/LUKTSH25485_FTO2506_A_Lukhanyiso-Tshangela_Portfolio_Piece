@@ -10,7 +10,7 @@ This project is a **Kanban task management application** built with JavaScript, 
 
 ## Loom Demo
 
-[View Project Demo](https://www.loom.com/share/your-looms-link)
+[View Project Demo](https://www.loom.com/share/25bcb98c869448c8856c5026ef9f2f24?sid=6250ee1c-b7b7-438b-87ef-a945df5ec53a)
 
 ## Features Implemented
 
