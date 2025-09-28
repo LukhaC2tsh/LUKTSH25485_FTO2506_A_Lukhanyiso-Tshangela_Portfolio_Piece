@@ -1,44 +1,38 @@
-import {renderTasks} from "../rendering/render.js"
-import {closeButton} from "../modal/edit-modal/edit-modal.js"
-import { initNewTaskModal} from "../modal/new-modal/new-modal.js"
-import {loadTasks, fetchTasks} from "../utils/local-storage.js"
-import { initSideBar } from "../ui-and-theme/side-bar.js"
-console.log("initNewTaskModal imported")
-
+import { initSideBar } from "../ui-and-theme/side-bar.js";
+import { initNewTaskModal } from "../modal/new-modal/new-modal.js";
+import { closeButton } from "../modal/edit-modal/edit-modal.js";
+import { loadTasks } from "../utils/local-storage.js";
+import { renderTasks } from "../rendering/render.js";
 /**
- * Initializes the sidebar toggle functionality.
+ * Initializes the Kanban board application.
  *
- * This function sets up event listeners for two sidebar toggle buttons:
- * - `.sidebar-toggle`: toggles the visibility of the sidebar.
- * - `.sidebar-toggle-2`: shows the sidebar if hidden.
+ * This function performs the following steps:
+ * 1. Loads tasks from local storage using `loadTasks()`.
+ * 2. If no tasks are found, it fetches tasks from the API using `fetchTasks()`.
+ * 3. Initializes the sidebar functionality with `initSideBar()`.
+ * 4. Renders the tasks into their respective columns using `renderTasks()`.
+ * 5. Sets up modal close buttons using `closeButton()`.
+ * 6. Initializes the new task modal functionality with `initNewTaskModal()`.
+ * 7. Logs the loaded or fetched tasks to the console for debugging.
  *
- * It also manages the display of the secondary toggle button based on the
- * sidebar's visibility state.
- *
- * The function interacts with the following DOM elements:
- * @property {HTMLElement} sidebar - The main sidebar container with id `side-bar-div`.
- * @property {HTMLElement} sidebarToggle - The primary toggle button with class `sidebar-toggle`.
- * @property {HTMLElement} sidebarToggle2 - The secondary toggle button with class `sidebar-toggle-2`.
- *
+ * @async
  * @function
- * @returns {void} Does not return a value.
+ * @returns {Promise<void>} A promise that resolves once the board and all features are initialized.
  */
-export function initSideBar() {
-    const sidebar = document.getElementById('side-bar-div');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    const sidebarToggle2 = document.querySelector('.sidebar-toggle-2');
+async function initBoard() {
+    let tasks = loadTasks();
 
-    if (!sidebar || !sidebarToggle || !sidebarToggle2) return;
-    
-    sidebarToggle2.style.display = "none";
+    // If no tasks in localStorage, fetch from API
+    if (tasks.length === 0) {
+        tasks = await fetchTasks();
+    }
 
-    sidebarToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("hidden");
-        sidebarToggle2.style.display = sidebar.classList.contains("hidden") ? "block" : "none";
-    });
-    
-    sidebarToggle2.addEventListener("click", () => {
-        sidebar.classList.remove('hidden');
-        sidebarToggle2.style.display = "none";
-    });
+    // Render tasks
+    initSideBar();
+    renderTasks(tasks);
+    closeButton();
+    initNewTaskModal();
+    console.log("Kanban board initialized with tasks:", tasks);
 }
+
+initBoard();
