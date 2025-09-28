@@ -1,6 +1,6 @@
-import { renderTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\rendering\render.js";
-import { loadTasks, saveTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\utils\local-storage.js";
-import { closeModal, openModal, setupOutsideClick, setupToggle, styleOptions } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\modal\edit-modal\edit-modal.js";
+import { renderTasks } from "../rendering/render.js";
+import { loadTasks, saveTasks } from "../utils/local-storage.js";
+import { closeModal, openModal, setupOutsideClick, setupToggle, styleOptions } from "../edit-modal/edit-modal.js";
 
 /**
  * Initializes the "New Task" modal.

@@ -1,5 +1,5 @@
-import { renderTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\rendering\render.js";
-import { saveTasks, loadTasks, fetchTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\utils\local-storage.js";
+import { renderTasks } from "../rendering/render.js";
+import { saveTasks, loadTasks, fetchTasks } from "../utils/local-storage.js";
 
 /**
  * Opens a modal dialog by its element ID.

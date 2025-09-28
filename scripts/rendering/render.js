@@ -1,4 +1,4 @@
-import { initializeModal } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\modal\edit-modal\edit-modal.js";
+import { initializeModal } from "../modal/edit-modal/edit-modal.js";
 
 /**
  * Columns object mapping task statuses to their respective container elements.

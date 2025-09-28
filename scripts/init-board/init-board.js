@@ -1,8 +1,8 @@
-import { initSideBar } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\ui-and-theme\side-bar.js";
-import { initNewTaskModal } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\modal\new-modal\new-modal.js";
-import { closeButton } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\modal\edit-modal\edit-modal.js";
-import { loadTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\utils\local-storage.js";
-import { renderTasks } from "C:\Users\Lukhanyiso\Documents\GitHub\LUKTSH25485_FTO2506_A_Lukhanyiso-Tshangela_Portfolio_Piece\scripts\rendering\render.js";
+import { initSideBar } from "../ui-and-theme/side-bar.js";
+import { initNewTaskModal } from "../modal/new-modal/new-modal.js";
+import { closeButton } from "../modal/edit-modal/edit-modal.js";
+import { loadTasks } from "../utils/local-storage.js";
+import { renderTasks } from "../rendering/render.js";
 /**
  * Initializes the Kanban board application.
  *
