@@ -424,6 +424,7 @@ input{
   max-width: 500px;
   height: fit-content;
   padding: 1.5rem;
+  overflow: visible;
 }
 
 
