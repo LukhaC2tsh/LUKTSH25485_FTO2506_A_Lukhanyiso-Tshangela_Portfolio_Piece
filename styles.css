@@ -38,6 +38,8 @@ body {
   border-right: 1px solid #e4ebfa; /* Light divider */
   width: var(--sidebar-width);
   height: 100vh;
+  justify-content: space-between;
+  position: relative;
 }
 
 #side-logo-div {
@@ -219,7 +221,8 @@ h2 {
   background-color: var(--primary-color);
   border-radius: 10px;
   padding: 2rem;
-  width: 600;
+  width: 70%;
+  max-width: 400px;
   height: fit-content;
   border: none;
   overflow: visible;
@@ -347,15 +350,16 @@ input{
 .buttons-container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   margin: 1.5rem 0 0 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 #save-task-btn{
   font-family: inherit;
   font-weight: 700;
-  width: 100%;
+  width: 48%;
   height: 40px;
   border-radius: 20px;
   border: none;
@@ -366,7 +370,7 @@ input{
 #delete-task-btn{
   font-family: inherit;
   font-weight: 700;
-  width: 100%;
+  width:48%;
   height: 40px;
   border-radius: 20px;
   border: none;
@@ -389,9 +393,10 @@ input{
 }
 
 #add-task-btn{
-  width: 114;
-  height: 33px;
-  border-radius: 20px;
+  width: 164px;
+  height: 48px;
+  font-size: 15px;
+  border-radius: 24px;
   border: none;
   background-color:#635FC7;
   color: #fff;
@@ -415,7 +420,8 @@ input{
   border: none;
   border-radius: 20px;
   background-color: var(--primary-color);
-  width: 479px;
+  width: 90%;
+  max-width: 500px;
   height: fit-content;
   padding: 1.5rem;
 }
@@ -499,6 +505,54 @@ label{
   font-size: 13px;
   color: var(--primary-font-color);
   padding-left: .5rem;
+}
+
+/*===================  
+  UI THEME CONTROL VIEW
+====================*/
+.ui-control-container{
+  margin-bottom: 2rem;
+  max-width: var(--sidebar-width);
+  width: 90%;
+}
+
+.sidebar-toggle{
+  background-color:#F4F7FD;
+  color: #635FC7;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  width: 100%;
+  height: 49.75px;
+}
+
+.sidebar-toggle-2{
+  background-color:#A8A4FF;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  width: 7%;
+  height: 49.75px;
+  position: fixed;
+  top: 90%;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.hidden{
+  display: none;
+}
+
+.theme-toggle{
+  margin: 0 0 0 1rem;
+  border: none;
+  background-color: #F4F7FD;
+  width: 95%;
+  height: 49.75px;
+  padding: 0;
 }
 
 /* ========================
@@ -623,8 +677,38 @@ modal view
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
   margin: 1.5rem 0 0 0;
-}
+  height: fit-content;
+
+  }
+
+  #save-task-btn{
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #635FC7;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: .7rem;
+  }
+  #delete-task-btn{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #EA5555;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #create-task-btn{
+    width: auto;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #635FC7;
+    color: #fff;
+    cursor: pointer;
+  }
 }

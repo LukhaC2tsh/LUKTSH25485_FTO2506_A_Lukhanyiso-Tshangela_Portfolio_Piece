@@ -37,6 +37,9 @@
         </button>
       </div>
     </nav>
+    <div class="side-toggle-2">
+      <button type="button" class="sidebar-toggle-2" aria-pressed="false">👀</button>
+    </div>
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
     <div id="layout">
@@ -63,7 +66,7 @@
           <div class="column-div" data-status="todo">
             <div id="todo-head-div" class="column-head-div">
               <span class="dot" id="todo-dot"></span>
-              <h4 id="toDoText" class="columnHeader">TODO (4)</h4>
+              <h4 id="toDoText" class="columnHeader">TODO</h4>
             </div>
             <!-- Tasks container for TODO -->
             <div class="tasks-container">
@@ -73,7 +76,7 @@
           <div class="column-div" data-status="doing">
             <div id="doing-head-div" class="column-head-div">
               <span class="dot" id="doing-dot"></span>
-              <h4 id="doingText" class="columnHeader">DOING (2)</h4>
+              <h4 id="doingText" class="columnHeader">DOING </h4>
             </div>
             <!-- Tasks container for DOING -->
             <div class="tasks-container">
@@ -83,7 +86,7 @@
           <div class="column-div" data-status="done">
             <div id="done-head-div" class="column-head-div">
               <span class="dot" id="done-dot"></span>
-              <h4 id="doneText" class="columnHeader">DONE (2)</h4>
+              <h4 id="doneText" class="columnHeader">DONE </h4>
             </div>
             <!-- Tasks container for DONE -->
             <div class="tasks-container">
@@ -129,7 +132,7 @@
           </div>
           <div class="buttons-container" id="buttons-container">
             <button type="button"  id="save-task-btn">Save Changes</button>
-            <button type="button"  id="delete-task-btn">Delete</button>
+            <button type="button"  id="delete-task-btn">Delete Task</button>
           </div>
         </form>
       </dialog>
@@ -146,17 +149,16 @@
             </button>
           </div>
           <label for="new-task-title">Title:</label>
-          <input type="text" id="new-task-title">
+          <input type="text" id="new-task-title" placeholder="e.g. Take chilled break">
 
           <label for="new-task-desc">Description:</label>
-          <textarea id="new-task-desc"></textarea>
-
+          <textarea id="new-task-desc" placeholder="e.g Pet your dog, have a cup of coffee, dance to your favourite song and come back to crush this challenge."></textarea>
           <label>Status:</label>
 
           <!--TASK STATUS DROPDOWN-->
           <div class="new-task-status-container">
             <div class="new-task-status-event" id="new-task-status-event">
-                <span id="new-task-status">check</span>
+                <span id="new-task-status" aria-placeholder=""></span>
                 <div class="dropdown-arrow"></div>
             </div>
             <div class="new-status-option-container show-options" id="new-status-option-container">
@@ -168,7 +170,7 @@
             </div>
           </div>
           <div class="buttons-container" id="new-buttons-container">
-            <button type="button"  id="create-task-btn">Create</button>
+            <button type="button"  id="create-task-btn">Create Task</button>
           </div>
         </form>
       </dialog>
